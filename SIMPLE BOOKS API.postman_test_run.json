@@ -1,0 +1,466 @@
+{
+	"id": "8eb95958-1f0b-47a3-a852-34fdc9eaf788",
+	"name": "SIMPLE BOOKS API",
+	"timestamp": "2023-10-10T11:13:29.374Z",
+	"collection_id": "28019510-8f5ead96-39c5-4e50-b83a-4416e92bab1c",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 22,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-10-10T11:13:23.549Z",
+	"totalFail": 15,
+	"results": [
+		{
+			"id": "3ddd44b7-45cf-4a0b-93ae-ef91e9ceb670",
+			"name": "Status",
+			"url": "https://simple-books-api.glitch.me/status",
+			"time": 1114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required field - status": true,
+				"Status is a non-empty string": true,
+				"Response time is in an acceptable range": false,
+				"Content-Type header is set to 'application/json'": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required field - status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is in an acceptable range": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is set to 'application/json'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1114
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required field - status": true,
+					"Status is a non-empty string": true,
+					"Response time is in an acceptable range": false,
+					"Content-Type header is set to 'application/json'": true
+				}
+			]
+		},
+		{
+			"id": "ef02f193-1fbf-4960-9e0f-9cf87041c466",
+			"name": "list of books",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 227,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Validate that the response is an array": true,
+				"Validate that the 'id' field is a non-negative integer": true,
+				"Verify that the 'name' field is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the response is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the 'id' field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the 'name' field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				227
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Validate that the response is an array": true,
+					"Validate that the 'id' field is a non-negative integer": true,
+					"Verify that the 'name' field is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "50d7ffa3-149f-483d-9587-30a0602c7fed",
+			"name": "get a book by id",
+			"url": "https://simple-books-api.glitch.me/books/5",
+			"time": 231,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Validate id field is a non-negative integer": true,
+				"Validate the 'name' field is a non-empty string": true,
+				"The author field should be a non-empty string": true,
+				"Validate the 'type' field is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate id field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the 'name' field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The author field should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the 'type' field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				231
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Validate id field is a non-negative integer": true,
+					"Validate the 'name' field is a non-empty string": true,
+					"The author field should be a non-empty string": true,
+					"Validate the 'type' field is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "80644cbc-1b74-40ce-bcc9-a189e2f9e6a2",
+			"name": "register client",
+			"url": "https://simple-books-api.glitch.me/api-clients/",
+			"time": 308,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required field - accessToken": true,
+				"accessToken is a non-empty string": true,
+				"Response time is less than 200ms": false,
+				"Verify that the accessToken is a valid JWT token": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required field - accessToken": {
+					"pass": 1,
+					"fail": 0
+				},
+				"accessToken is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Verify that the accessToken is a valid JWT token": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				308
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required field - accessToken": true,
+					"accessToken is a non-empty string": true,
+					"Response time is less than 200ms": false,
+					"Verify that the accessToken is a valid JWT token": false
+				}
+			]
+		},
+		{
+			"id": "1f3c8b0b-7dc8-483e-ba0a-a8984be844ab",
+			"name": "submit an order",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 261,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 201": false,
+				"Response has the 'error' field": true,
+				"Response field is a non-empty string": true,
+				"Verify that the response is in JSON format": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the 'error' field": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				261
+			],
+			"allTests": [
+				{
+					"Response status code is 201": false,
+					"Response has the 'error' field": true,
+					"Response field is a non-empty string": true,
+					"Verify that the response is in JSON format": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "f0cfe7e7-eedc-49d4-bc86-2bd37829e740",
+			"name": "get all orders",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 235,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 200": false,
+				"Response is an array with at least one element": false,
+				"Each order has a unique ID": false,
+				"Customer name is a non-empty string": false,
+				"Quantity is a non-negative integer": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response is an array with at least one element": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Each order has a unique ID": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Customer name is a non-empty string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Quantity is a non-negative integer": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				235
+			],
+			"allTests": [
+				{
+					"Response status code is 200": false,
+					"Response is an array with at least one element": false,
+					"Each order has a unique ID": false,
+					"Customer name is a non-empty string": false,
+					"Quantity is a non-negative integer": false
+				}
+			]
+		},
+		{
+			"id": "cc3186a0-8e5b-44b6-8ea8-a82f065577ee",
+			"name": "get all order by id",
+			"url": "https://simple-books-api.glitch.me/orders/IhBy_j6ercHavhcE9yF3I",
+			"time": 251,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 200": false,
+				"Verify that the 'id' field is a non-empty string": false,
+				"Verify that the 'bookId' field is a non-negative integer": false,
+				"Verify that the customerName field is a non-empty string": false,
+				"Verify that the 'createdBy' field is a non-empty string": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Verify that the 'id' field is a non-empty string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Verify that the 'bookId' field is a non-negative integer": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Verify that the customerName field is a non-empty string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Verify that the 'createdBy' field is a non-empty string": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				251
+			],
+			"allTests": [
+				{
+					"Response status code is 200": false,
+					"Verify that the 'id' field is a non-empty string": false,
+					"Verify that the 'bookId' field is a non-negative integer": false,
+					"Verify that the customerName field is a non-empty string": false,
+					"Verify that the 'createdBy' field is a non-empty string": false
+				}
+			]
+		},
+		{
+			"id": "09d1b59c-9079-4444-a529-8e4f712517c6",
+			"name": "update an order",
+			"url": "https://simple-books-api.glitch.me/orders/IhBy_j6ercHavhcE9yF3I",
+			"time": 242,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				242
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f4af61b3-9c6f-44e2-8d1a-48b34b5a5405",
+			"name": "Delete an order",
+			"url": "https://simple-books-api.glitch.me/orders/lWBhyjDJBMjELAHbA5MBc",
+			"time": 314,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 404": false,
+				"Error message is not empty": true,
+				"Error message is a string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Error message is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error message is a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				314
+			],
+			"allTests": [
+				{
+					"Response status code is 404": false,
+					"Error message is not empty": true,
+					"Error message is a string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3183,
+	"collection": {
+		"requests": [
+			{
+				"id": "3ddd44b7-45cf-4a0b-93ae-ef91e9ceb670",
+				"method": "GET"
+			},
+			{
+				"id": "ef02f193-1fbf-4960-9e0f-9cf87041c466",
+				"method": "GET"
+			},
+			{
+				"id": "50d7ffa3-149f-483d-9587-30a0602c7fed",
+				"method": "GET"
+			},
+			{
+				"id": "80644cbc-1b74-40ce-bcc9-a189e2f9e6a2",
+				"method": "POST"
+			},
+			{
+				"id": "1f3c8b0b-7dc8-483e-ba0a-a8984be844ab",
+				"method": "POST"
+			},
+			{
+				"id": "f0cfe7e7-eedc-49d4-bc86-2bd37829e740",
+				"method": "GET"
+			},
+			{
+				"id": "cc3186a0-8e5b-44b6-8ea8-a82f065577ee",
+				"method": "GET"
+			},
+			{
+				"id": "09d1b59c-9079-4444-a529-8e4f712517c6",
+				"method": "PATCH"
+			},
+			{
+				"id": "f4af61b3-9c6f-44e2-8d1a-48b34b5a5405",
+				"method": "DELETE"
+			}
+		]
+	}
+}
