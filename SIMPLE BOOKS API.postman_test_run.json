@@ -6,6 +6,7 @@
   "folder_id": 0,
   "environment_id": "0",
   "totalPass": 22,
+
   "delay": 0,
   "persist": true,
   "status": "finished",
@@ -445,5 +446,9 @@
   }
 }
 
+<<<<<<< HEAD
 //this are valid cases
 //GodAbeg
+=======
+//this are valid cases + 1
+>>>>>>> ec348dc2a6ddef669279daa6e7a45063d7ad7941
